@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2015 John A. Crown -->
+<!-- GNU General Public License -->
+
+<html>
+  <head>
+    <title>JottoAssist</title>
+    <link type="text/css" rel="stylesheet" href="jotto.css">
+    <script type="text/javascript" src="jottodictionary.js"> </script>
+    <script type="text/javascript" src="jottoassists.js"> </script>
+  </head>
+  <body onload="myJottoOnLoad();">
+    <div> Jotto Assistant v2.001 ; Copyright &copy; 2015 John A. Crown ; GNU General Public License </div>
+    <article class="jottoadvisor">
+      <!-- moveable section: guessboard -->
+      <section class="jotto_guessboard" id="guesses">
+        <div>
+          
+        </div>
+        <h2> <a href="#guesses"> Guesses </a> </h2>
+        <div style="clear:both;float:left; ">
+<!--          &nbsp; Game Mode : AdvisorMode / HumanGuesses / ComputerGuesses ::: -->
+          <button type="button" id="newgame" style="float:left;" onclick="startANewGame();">
+            NewGame
+          </button>
+          <button type="button" id="cleardict" style="float:left;" onclick="clearDictionary();">
+            clearDictionary
+          </button>
+        </div >
+        <div class="glistouter">
+          <div class="glist" id="gboard_grower" style="clear:both;float:left;">
+          </div>
+          <div style="float:left;">
+          </div>
+        </div>
+      </section> <!-- jotto_guessboard -->
+
+      <!-- moveable section: dictionary -->
+      <section class="jotto_dictionary" id="dictionary">
+        <h2> <a href="#dictionary"> Dictionary </a> </h2>
+        <div style="clear:both;float:left"> <div style="float:left" id="dictionary_size99">99999</div> &nbsp;words </div>
+        <div style="clear:both;float:left">
+          [x] Use default dictionary 
+          <font color="gray"> [ ] Use super-dictionary (65780 entries)  [ ] load dictionary from file: _________ </font>
+        </div >
+        <div style="clear:both;float:left">
+          [x] Show words not eliminated by guesses 
+          <font color="gray"> [ ] Show words satisfying this rule: __________ </font>
+        </div >
+        <div class="dl_list" id="dl_list">
+          <select class="dl_sel" id="dict_sel">
+            <option value=""></option>
+            <option value="brzip">brzip</option>
+            <option value="brzap">brzap</option>
+          </select>
+        </div>
+      </section> <!--jotto_dictionary -->
+
+      <!-- moveable section: letterboard -->
+      <section class="jotto_letterboard" id="letterboard">
+        <h2> <a href="#letterboard"> Letterboard </a> </h2>
+        <div class="lbdrow">
+          <div class="lbilbl"> proven IN </div>
+          <input class="lbinfo" id="letters_knownincl" type="text" maxlength="26" value="">
+        </div>
+        <div class="lbdrow">
+          <div class="lbilbl"> proven OUT </div>
+          <input class="lbinfo" id="letters_knownexcl" type="text" maxlength="26" value="">
+        </div>
+        <div class="lbdrow">
+          <div class="lbilbl"> unk IN/OUT </div>
+          <input class="lbinfo" id="letters_unkincl_excl" type="text" maxlength="26" value="">
+        </div>
+        <div class="lbdrow">
+          <div class="lbilbl"> letters used </div>
+          <input class="lbinfo" id="seen_letters" type="text" maxlength="26" value="">
+        </div>
+        <div class="lbdrow">
+          <div class="lbilbl"> letters unused </div>
+          <input class="lbinfo" id="unseen_letters" type="text" maxlength="26" value="">
+        </div>
+        <div class="lbdrow" >
+          <div class="lbilbl" > alphabet </div>
+          <input class="lbinfo" id="raw_alphabet" type="text" maxlength="26" value="abcdefghijklmnopqrstuvwxyz">
+        </div>
+        <div class="sep_row">
+          <div class="sep_lbl" > separations </div>
+          <input class="sep_info" id="separations98" type="text" maxlength="75" value="<unk>">
+        </div>
+      </section> <!--jotto_letterboard -->
+
+      <!-- moveable section: alternamerules -->
+      <section class="jotto_rules" id="alternaterules">
+        <h2> <a href="#alternaterules"> AlternateRules </a> </h2>
+        <div id="rules_grower">
+          <div class="ru_row">
+            <input class="ru_info" id="guess1" type="text" maxlength="40" value="4gmoy ; 1rs ; 0abcdefhijklnpqtuvwxz">
+          </div>
+          <div class="ru_row">
+            <input class="ru_info" id="guess2" type="text" maxlength="40" value="4imoy ; 1bcdfhjkqtuvwxz ; 0aeglnprs">
+          </div>
+          <div class="ru_row">
+            <input class="ru_info" id="guess3" type="text" maxlength="40" value="4gimy ; 1lp ; 0abcdefhjknoqrstuvwxz">
+          </div>
+        </div>
+      </section> <!--jotto_rules -->
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+// Copyright (c) 2015 John A. Crown
+// GNU General Public License
+
+.jotto_section_legend{
+  clear: both ;
+  float: left ;
+}
+
+.jotto_guessboard{
+  clear: both ;
+  float: left ;
+/*  background-color: pink; */
+  background-color: lightblue;
+  foreground-color: black;
+  border-color: black ;
+  width: 800px;
+  padding: 20px 10px 40px 10px ; /* top right bottom left */
+}
+.guessentry{
+  background-color: gray;
+  clear: both;
+  float: left;
+}
+.gwroundnum{
+  clear: both;
+  float: left;
+  text-align: right;
+  vertical-align: text-bottom;
+  width: 34px;
+}
+.gwin{
+  float: left;
+  background-color: lightgray;
+/*  vertical-align: text-bottom; */
+  vertical-align: text-top;
+  width: 80px;
+}
+.gwcnt{
+    float: left;
+    width: 30px;
+}
+
+.jotto_letterboard{
+  clear: both ;
+  float: left ;
+  background-color: lightgreen;
+  foreground-color: black;
+  border-color: black ;
+  width: 800px;
+  padding: 20px 10px 40px 10px ; /* top right bottom left */
+}
+.lbdrow{
+  clear: both;
+  float: left;
+  width: 580px;
+  background-color: gray;
+}
+.lbilbl{
+  clear: both;
+  float: left;
+  text-align: right;
+  vertical-align: text-bottom;
+  width: 110px;
+}
+.lbinfo{
+  width: 240px;
+  background-color: lightgray;
+  font-family:monospace;
+}
+
+.sep_row{
+  clear: both;
+  float: left;
+  width: 580px;
+  background-color: gray;
+}
+.sep_lbl {
+  clear: both;
+  float: left;
+  text-align: right;
+  vertical-align: text-bottom;
+  width: 110px;
+}
+.sep_info{
+  width: 450px;
+  background-color: lightgray;
+  font-family:monospace;
+}
+
+.jotto_rules{
+  clear: both ;
+  float: left ;
+  background-color: lightyellow; 
+  foreground-color: black;
+  border-color: black ;
+  width: 800px;
+  padding: 20px 10px 40px 10px ; /* top right bottom left */
+}
+.ru_row{
+  clear: both;
+  float: left;
+  width: 600px;
+  background-color: gray;
+}
+.ru_info_implaus{
+  width: 540px;
+  color: gray;
+  background-color: lightgray;
+  font-family:monospace;
+}
+.ru_info{
+  width: 540px;
+  background-color: lightgray;
+  font-family:monospace;
+}
+
+
+.jotto_dictionary{
+  clear: both ;
+  float: left ;
+  background-color: pink; 
+  foreground-color: black;
+  border-color: black ;
+  width: 800px;
+  padding: 20px 10px 40px 10px ; /* top right bottom left */
+
+}
+.dl_list{
+  clear: both;
+  float: left;
+/*  width: 400px; */
+/*  padding: 0px 0px 0px 60px ;*/  /* top right bottom left */
+  background-color: lightgray;
+}
+.dl_sel{
+  float: left;
+}
+
+article.jottoadvisor {
+    position: relative;
+    display: block;
+    width: 50em;
+    height: 15em;
+    margin: 2em auto;
+}
+
+@media screen and (orientation:landscape) and (max-height: 600px){
+
+    article.jottoadvisor section {
+        position: absolute;
+        display: block;
+        top: 1.8em;
+        left: 0;
+        height: 15em;
+        width: 800px;
+        padding: 10px 20px;
+        background-color: #ddd;
+        border-radius: 5px;
+        box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+        z-index: 0;
+    }
+    article.jottoadvisor section:first-child {
+        z-index: 1;
+    }
+    article.jottoadvisor section h2 {
+        position: absolute;
+        font-size: 1em;
+        font-weight: normal;
+        width: 120px;
+        height: 1.8em;
+        top: -1.8em;
+        left: 10px;
+        padding: 0;
+        margin: 0;
+        color: #999;
+        background-color: #ddd;
+        border-radius: 5px 5px 0 0;
+    }
+
+
+
+    article.jottoadvisor section:nth-child(2) h2 {
+        left: 120px;
+    }
+
+    article.jottoadvisor section:nth-child(3) h2 {
+        left: 240px;
+    }
+    article.jottoadvisor section:nth-child(4) h2 {
+        left: 360px;
+    }
+    article.jottoadvisor section:nth-child(5) h2 {
+        left: 480px;
+    }
+    article.jottoadvisor section:nth-child(6) h2 {
+        left: 550px;
+    }
+
+    article.jottoadvisor section h2 a {
+        display: block;
+        width: 100%;
+        line-height: 1.8em;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        outline: 0 none;
+    }
+
+    article.jottoadvisor section:target,
+    article.jottoadvisor section:target h2
+    {
+        color: #333;
+        background-color: #fff;
+        z-index: 2;
+    }
+
+    article.jottoadvisor section,                                                                        
+    article.jottoadvisor section h2                                                                      
+    {
+        -webkit-transition: all 500ms ease;
+        -moz-transition: all 500ms ease;
+        -ms-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+}
+
